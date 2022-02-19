@@ -1,0 +1,12 @@
+
+directive @client on FIELD
+directive @export(as: String!) on FIELD
+
+type CurrentRepo {
+  owner: String!
+  name: String!
+}
+
+extend type Query {
+  currentRepo: CurrentRepo!
+}
